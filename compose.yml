@@ -1,0 +1,9 @@
+version: "3.2"
+services:
+  tcpdump:
+    build:
+      context: .
+    #image: tcpdump:latest
+    network_mode: "host"
+    environment:
+      TCPDUMP_CMD: ${TCPDUMP_CMD}
