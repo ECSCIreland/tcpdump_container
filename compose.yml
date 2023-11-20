@@ -3,7 +3,7 @@ services:
   tcpdump:
     build:
       context: .
-    #image: tcpdump:latest
+    restart: unless-stopped
     network_mode: "host"
     environment:
       TCPDUMP_CMD: ${TCPDUMP_CMD}
